@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        
+        <!--
+            div: Search
+                button: onClick = getWeatherDetails()
+
+            This div is designed to hold our "getWeatherDetails" button.
+            When clicked, this method will be called to gather the information related
+            to the place that was inputted in the <input> component.
+        -->
+        <div class="search">
+            
+            <form>
+                <input type="search" id="search" placeholder="City Name">
+                <br>
+                <input type="button" onclick="getWeatherDetails()" value="Submit">
+            </form>
+
+        </div>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        
+        <!--
+            div: Main
+
+            Contains our App Title, aswell as location name and the location icon.
+            Location icon is determined by the details provided in the getWeatherDetails function.
+        -->
+        <div class="main-container drop-shadow fade-in" id="main">
+            
+            <div class="app-title">
+                <h6>
+                    Weather App
+                </h6>
+            </div>
+
+            <div class="location-name">
+                <img class ="location-icon" src="images/icons/destination.png">
+                <p>
+                    Palm Bay, Florida
+                </p>
+            </div>
+
+            <div class="weather-description">
+                
+                <h1>
+                    Scattered Thunderstorms
+                </h1>
+
+            </div>
+
+            <div class="icon-and-temp drop-shadow">
+               
+                <img class="weather-icon" src="images/icons/snow.svg">
+
+                <span class = "temperature">
+                    18°
+                </span>               
+            
+            </div>
+        
+        </div>
+
+        <!--
+            Super quick hook for our JS script
+        -->
+        <script src="api.js"></script>
+    </body>
+</html>

@@ -1,0 +1,213 @@
+/* Modern CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styles */
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f5f5f5;
+  }
+  
+  /* Container Styles */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .fade-in {
+    animation: fadeIn .5s;
+    animation-fill-mode: backwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .animate {
+    animation-name: slide-right;
+    animation-duration: 2s;
+    /* Preserve the effect of the animation at ending */
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes slide-right {
+  
+    from {
+      margin-left: 0px;
+    }
+  
+    50% {
+      margin-left: 110px;
+      opacity: 0.5;
+    }
+  
+    to {
+      margin-left: 200px;
+      opacity: 0.2;
+    }
+  }
+  
+
+  .main-container {
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    margin: 0 auto;
+
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+
+    box-shadow: #333;
+
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+    border-width: 0px;
+
+    background-color: rgb(197, 226, 243);
+  }
+
+  .temperature {
+    align-self: first baseline;
+    font-size: 500%; 
+    position: absolute;
+    left: -125px;
+    top: 10%
+  }
+  
+  .weather-icon
+  {
+    position: absolute;
+    top: 110px;
+    left: 125px;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    align-self: first baseline;
+  }
+
+  .icon-and-temp
+  {
+    position: relative;
+    top: 20%;
+    right: 25px;
+  }
+  
+  .drop-shadow
+  {
+    filter: drop-shadow(8px 8px 3px #1a1a1a1e);
+  }
+
+  .location-name img
+  {
+    flex-grow: 1;
+    margin-right: 10px;
+    width: 40px;
+  }
+
+  .location-name
+  {
+    font-size: x-large;
+    font-style:normal;
+    position: absolute;
+    transform: translate(-50%, 0);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    top: 85%;
+    left: 50%;
+  }
+
+  .search
+  {
+    position: relative;
+    top: 55px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search input
+  {
+    
+    width: 200px;
+  }
+
+  .weather-description
+  {
+    font-size: 15px;
+    font-style:normal;
+    position: absolute;
+    text-align: center;
+
+    top: 70%;
+
+  }
+
+  .app-title
+  {
+    font-size: 50px;
+    font-style:normal;
+    position: absolute;
+    transform: translate(-50%, 0);
+    top: 5%;
+    left: 50%;
+  }
+
+  /* Header Styles */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .navigation {
+    display: flex;
+  }
+  
+  .navigation a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .navigation a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Button Styles */
+  button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
